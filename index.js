@@ -2,8 +2,9 @@ const express = require("express");
 const { spawn } = require("child_process");
 const readline = require("readline");
 const stripAnsi = require("strip-ansi");
+const path = require('path')
 
-require("dotenv").config();
+require('dotenv').config({ path: path.resolve(__dirname, '.env') })
 const app = express();
 
 const port = process.env.PORT || 3000;
